@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<ion-content class="ion-padding" class="ion-padding">
+  <section class="full-width">
+    <ion-slides #slides>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon slot="end" class="color-green" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon slot="end" class="color-green" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img
+          src="../../../../assets/ROXO 5.png"
+          class="img-150" />
+        <h4>Você gostaria de fazer uma jornada para aprender como poupar?</h4>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Sim
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn">
+          Não
+        </ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon slot="end" class="color-green" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon slot="end" class="color-green" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/ROXO 6.png" class="img-150" />
+        <h4>Uma jornada para aprender a reduzir os gastos!</h4>
+        <ion-button color="medium" expand="full" size="large" (click)="nextSlide()">Iniciar</ion-button>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>

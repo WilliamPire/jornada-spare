@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<ion-content class="ion-padding" class="ion-padding">
+  <section class="full-width">
+    <ion-slides #slides>
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon slot="end" class="color-green" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/ROSA 3.png" class="img-150" />
+        <h4>Voce já poupou dinheiro alguma vez?</h4>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Sim
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Não
+        </ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon slot="end" class="color-green" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon slot="end" class="color-green" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/Rosa 4.png" class="img-150" />
+        <h4>Voce consegue poupar 25,00 reais por mês?</h4>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Sim
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit('Não')">
+          Não
+        </ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon slot="end" class="color-green" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/Rosa 5.png" class="img-150" />
+        <h4>Parabéns, você completou sua jornada.</h4>
+        <ion-button color="medium" expand="full" size="large" (click)="nextSlide()">Avançar</ion-button>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>

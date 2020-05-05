@@ -1,0 +1,129 @@
+<app-navbar></app-navbar>
+<ion-content class="ion-padding" scroll-y="true" class="ion-padding">
+  <section class="full-width">
+    <ion-slides #slides>
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 3.png" class="img-150" />
+        <h4>Qual é o valor aproximado dos seus investimentos financeiros atualmente?</h4>
+         <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          0 a 5 mil
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          5 a 10 mil
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          10 a 50 mil
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+           50 a 100 mil
+        </ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon class="color-green" slot="end" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 4.png" class="img-150" />
+        <h4>Selecione abaixo os investimentos que você já teve:</h4>
+        <ion-list>
+          <ion-item *ngFor="let entry of form">
+            <ion-label>{{entry.val}}</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+        <ion-button color="medium" expand="full" size="large" (click)="nextSlide()">Avançar</ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon class="color-green" slot="end" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 5.png" class="img-150" />
+        <h4>Qual é o seu objetivo ao investir?</h4>
+        <ion-list>
+          <ion-item *ngFor="let entry of objetivosInvestimento">
+            <ion-label>{{entry.val}}</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+        <ion-button color="medium" expand="full" size="large" (click)="nextSlide()">Avançar</ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 6.png" class="img-150" />
+        <h4>Parabéns, você completou sua jornada.</h4>
+        <ion-button color="medium" expand="full" size="large" (click)="nextSlide()">Avançar</ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon class="color-green" slot="end" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 7.png" class="img-150" />
+        <h4>Escolha seu caminho Explorador! </h4>
+        <ion-list>
+          <ion-radio-group value="CDB">
+            <ion-item *ngFor="let entry of options">
+              <ion-label>{{entry.val}}</ion-label>
+              <ion-radio slot="end" (click)="definirCaminhoExplorador(entry.slide)" [value]="entry.val"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        <ion-button color="medium" expand="full" size="large" (click)="submitInvestidor()">Avançar</ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 8.png" class="img-150" />
+        <p>Voce escolheu o <b>CDB</b> ! <br>
+          Já percebemos que gosta de ter autonomia na hora de resgatar! </p>
+        <p>O Certificado de Depósito Bancário  é uma aplicação de renda fixa que permite o resgate parcial ou total a
+          qualquer momento. Além da liquidez, possui rentabilidade diária e o percentual fixo do CDI é definido na hora
+          de invest</p>
+      </ion-slide>
+
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 8.png" class="img-150" />
+        <p>Você escolheu o <b>LCA</b>!<br>
+          Já vimos tudo senhor das terras! A Letra de Crédito do Agronegócio, é uma opção de investimento de baixo risco
+          e com rentabilidade superior às outras aplicações de renda fixa, que pode ser pré ou pós-fixada. </p>
+        <p>Vantagens:
+          Rentabilidade superior a outras aplicações de renda fixa, Isenção de IR para Pessoa Física,
+          Zero taxa de administração, Aplicações garantidas pelo FGCoop* </p>
+        <p>Ah! e com a LCA, enquanto você multiplica o seu capital de forma segura e com uma ótima taxa de retorno,
+          também semeia o desenvolvimento do setor agrícola do nosso país.</p>
+      </ion-slide>
+
+      <ion-slide>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 8.png" class="img-150" />
+        <p>Voce escolheu <b>RDC</b>!<br>
+          Otima escolha!O RDC, é um investimento em renda fixa com rentabilidade e liquidez diárias, que pode ser pré ou
+          pós-fixado. No Jornada Spare temos apenas o RDC Curto, quando você tem uma data pre definida para resgate!
+          Vantagens:
+          Quanto mais você investe, melhor é a remuneração da sua aplicação e maior é a sua participação nos resultados
+          da sua cooperativa
+          Alíquotas do IR decrescentes, de acordo com o tempo de aplicação
+          Aplicações garantidas pelo FGCoop*
+          E de quebra você ainda promove o desenvolvimento socioeconômico da comunidade!! </p>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>

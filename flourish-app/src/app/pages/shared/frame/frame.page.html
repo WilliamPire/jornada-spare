@@ -1,0 +1,20 @@
+<ion-menu contentId="my-content">
+  <ion-content class="ion-padding">
+    <app-user-card></app-user-card>
+    <ion-list lines="none">
+      <!--<ion-item-divider>
+        <ion-label>&nbsp;</ion-label>
+      </ion-item-divider>-->
+      <ion-item class="clickable" (click)="goToPage('')" detail>
+        <ion-icon slot="start" color="light" name="home"></ion-icon> Home
+      </ion-item>
+      <ion-item class="clickable" (click)="goToPage('pontuacao')" detail>
+        <ion-icon slot="start" color="light" name="list"></ion-icon> Pontuação
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet>
+  <div id="my-content">...</div>
+</ion-router-outlet>

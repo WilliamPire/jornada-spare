@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<ion-content class="ion-padding">
+  <section class="full-width">
+    <ion-slides #slides>
+      <ion-slide>
+        <img style="border-radius: 100px;" src="../../../../assets/LOGO 1.png" class="img-150">
+        <h4>Seja muito bem vindo a <b>Jornada Spare</b></h4>
+        <p>Olá <b>{{ user.name }}</b> Venha conosco descobrir a sua jornada em nosso APP.</p>
+        <ion-button color="medium" size="large" (click)="nextSlide()">Start</ion-button>
+      </ion-slide>
+      <ion-slide>
+        <div style="float: left">
+          <ion-icon class="color-green" slot="end" name="arrow-back" (click)="prevSlide()"></ion-icon>
+        </div>
+        <div style="float: right">
+          <ion-icon class="color-green" slot="end" name="refresh" (click)="restartQuiz()"></ion-icon>
+        </div>
+        <img src="../../../../assets/PRETO 2.png" class="img-150">
+        <h4>Como você avalia seu conhecimento sobre investimentos?</h4>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn"
+          (click)="submit('Não tenho conhecimento')">
+          Não tenho conhecimento
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Razoável
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Bom
+        </ion-button>
+        <ion-button color="medium" expand="full" size="large" class="animated fadeIn" (click)="submit()">
+          Excelente
+        </ion-button>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>

@@ -1,0 +1,4 @@
+C:\Users\william.pereira\source\repos\JornadaSpare\JornadaSpare.API\obj\Debug\netcoreapp2.2\JornadaSpare.API.csprojAssemblyReference.cache
+C:\Users\william.pereira\source\repos\JornadaSpare\JornadaSpare.API\obj\Debug\netcoreapp2.2\JornadaSpare.API.csproj.CoreCompileInputs.cache
+C:\Users\william.pereira\source\repos\JornadaSpare\JornadaSpare.API\obj\Debug\netcoreapp2.2\JornadaSpare.API.AssemblyInfoInputs.cache
+C:\Users\william.pereira\source\repos\JornadaSpare\JornadaSpare.API\obj\Debug\netcoreapp2.2\JornadaSpare.API.AssemblyInfo.cs

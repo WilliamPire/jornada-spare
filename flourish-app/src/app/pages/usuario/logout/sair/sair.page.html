@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sair</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" scroll-y="true" class="ion-padding">
+  <section class="full-width">
+    <ion-slides #slides>
+      <ion-slide>
+        <img src="https://github.com/ionic-team/ionic-docs/blob/v4/src/demos/api/slides/slide-3.png?raw=true"
+          class="img-150" />
+        <h4>Deseja realmemte sair do APP ?</h4>
+         <ion-button color="light" expand="full" size="large" class="animated fadeIn" (click)="logout()">
+          Sim
+        </ion-button>
+        <ion-button color="light" expand="full" size="large" class="animated fadeIn" (click)="restartQuiz()">
+          Não
+        </ion-button>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>
